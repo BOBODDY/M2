@@ -43,6 +43,15 @@ public class Person3 {
 	 */
 	private String calc(String input) {
 	  //Person 3 put your implementation here
-	  return null;
+	char c = 'd';
+	char letters[] = input.toCharArray();
+	  
+	for(int i = 0; i < letters.length; i++){
+		letters[i] = c;
+		letters [i] = letters[(letters.length - 1) - i];
+		letters[(letters.length - 1) - i] = letters[i];
+	}
+	input = new String(letters);
+	return input;
 	}
 }
