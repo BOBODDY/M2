@@ -43,15 +43,13 @@ public class Person3 {
 	 */
 	private String calc(String input) {
 	  //Person 3 put your implementation here
-	char c = 'd';
-	char letters[] = input.toCharArray();
-	  
-	for(int i = 0; i < letters.length; i++){
-		letters[i] = c;
-		letters [i] = letters[(letters.length - 1) - i];
-		letters[(letters.length - 1) - i] = letters[i];
-	}
-	input = new String(letters);
-	return input;
+	  char[] letters = input.toCharArray();
+	  char[] reversedChar = new char[letters.length];
+		  
+	  for(int i = 0; i < letters.length; i++){
+	    reversedChar[i] = letters[(letters.length - 1) - i];
+	  }
+	  String reversedStr = new String(reversedChar);
+	  return reversedStr;
 	}
 }
